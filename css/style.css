@@ -1,0 +1,131 @@
+/* ===== Portfólio Emilly Victorya — estilos principais ===== */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--green:#063f38;--green2:#0a6656;--mint:#dff3e9;--lime:#b9e769;--cream:#f6f3e9;--text:#18342f;--serif:'Fraunces',Georgia,serif}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:'Inter',Arial,sans-serif;color:var(--text);background:var(--cream);line-height:1.7}
+img{max-width:100%}
+h1,h2,h3{font-family:var(--serif);line-height:1.1}
+
+/* Cabeçalho */
+.header{position:fixed;inset:0 0 auto 0;min-height:72px;padding:10px 6%;display:flex;align-items:center;justify-content:space-between;background:rgba(3,48,43,.9);backdrop-filter:blur(12px);z-index:1000;transition:.3s}
+.header.scrolled{box-shadow:0 6px 24px rgba(0,0,0,.25)}
+.brand{color:#fff;text-decoration:none;font-family:var(--serif);font-size:1.5rem;font-weight:600}.brand b{color:var(--lime)}
+
+/* Hero */
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;padding:120px 8% 80px;color:#fff;background:linear-gradient(95deg,rgba(2,30,26,.93) 25%,rgba(2,30,26,.35)),url(../img/arara-azul.jpg) center/cover}
+.hero-content{max-width:720px}
+.eyebrow,.tag{display:inline-block;letter-spacing:2.5px;font-weight:700;font-size:.78rem;color:var(--lime);margin-bottom:14px}
+.hero h1{font-size:clamp(3.2rem,8vw,6.5rem);margin-bottom:14px}.hero h1 span{color:var(--lime)}
+.typing-line{font-size:1.5rem;color:#fff;margin-bottom:12px}.typing-line strong{color:var(--lime)}
+.cursor{color:var(--lime);animation:blink 1s steps(2) infinite}@keyframes blink{50%{opacity:0}}
+.hero p{color:#e6f3ee;max-width:600px}
+.hero-actions{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+.cta{display:inline-block;background:var(--lime);color:#16362d;text-decoration:none;font-weight:700;padding:14px 26px;border-radius:30px;transition:.25s}
+.cta:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(0,0,0,.25)}
+.cta-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6)}
+.scroll-hint{position:absolute;bottom:26px;left:50%;color:#fff;text-decoration:none;font-size:1.6rem;animation:bounce 2s infinite}
+@keyframes bounce{50%{transform:translateY(8px)}}
+
+/* Seções */
+.section{padding:100px 8%}.soft{background:var(--mint)}.dark{background:var(--green);color:#fff}
+.section-heading{text-align:center;max-width:720px;margin:0 auto 48px}
+.section-heading h2,.contact h2,.panel h2,.about h2{font-size:clamp(2.2rem,5vw,3.6rem);color:var(--green);margin-bottom:14px}
+.section-heading p{color:#5c706a;font-size:1.08rem}
+.dark .section-heading h2{color:#fff}.dark .section-heading p{color:#cce0d8}
+
+/* Sobre */
+.about{max-width:1050px;margin:auto}
+.portrait{border-radius:24px;overflow:hidden;box-shadow:0 20px 50px rgba(4,54,45,.25);aspect-ratio:4/5;transform:rotate(-2deg);border:6px solid #fff}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block}
+.about p{margin-bottom:14px;color:#3d544e}
+.chips{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:20px 0}
+.chips li{background:#fff;border:1px solid #d5e6dc;padding:8px 16px;border-radius:30px;font-weight:500;font-size:.95rem}
+.chips.light li{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25);color:#fff}
+.stats{margin-top:26px;background:var(--green);border-radius:18px;color:#fff;overflow:hidden}
+.stats div{padding:20px 10px;text-align:center;border-right:1px solid rgba(255,255,255,.12)}.stats div:last-child{border:0}
+.stats strong{display:block;font-family:var(--serif);font-size:2.4rem;color:var(--lime)}.stats span{font-size:.8rem}
+
+/* Cards */
+.uni-card{background:#fff;border-radius:20px;padding:30px 26px;box-shadow:0 12px 35px rgba(4,54,45,.09);transition:.3s;border:1px solid #e4ece6}
+.uni-card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(4,54,45,.16)}
+.icon{font-size:2.8rem;margin-bottom:12px}.uni-card h3{font-size:1.5rem;color:var(--green);margin-bottom:8px}.uni-card p{font-size:.95rem;color:#52675f}
+
+/* Banner */
+.banner{height:50vh;display:grid;place-items:center;text-align:center;padding:30px;background:linear-gradient(rgba(2,45,38,.55),rgba(2,45,38,.55)),url(../img/banner-fauna.jpg) center/cover fixed}
+.banner p{color:#fff;font-family:var(--serif);font-weight:800;font-size:clamp(2rem,4.5vw,3.8rem);line-height:1.15;max-width:900px}
+
+/* Galeria */
+.filters{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-bottom:34px}
+.filters button{font:inherit;font-weight:600;font-size:.9rem;padding:9px 20px;border-radius:30px;border:2px solid var(--green);background:transparent;color:var(--green);cursor:pointer;transition:.25s}
+.filters button:hover,.filters button.active{background:var(--green);color:#fff}
+.gallery-grid{max-width:1150px;margin:auto}
+.section .container{max-width:1150px}
+.gallery-item{width:100%;display:block;position:relative;border:0;padding:0;border-radius:18px;overflow:hidden;cursor:pointer;aspect-ratio:4/3;box-shadow:0 10px 25px rgba(3,63,52,.18);animation:pop .4s}
+.gallery-item.hide{display:none}@keyframes pop{from{opacity:0;transform:scale(.95)}}
+.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:.5s}
+.gallery-item:hover img{transform:scale(1.08)}
+.gallery-item span{position:absolute;inset:auto 0 0 0;padding:30px 16px 14px;background:linear-gradient(transparent,rgba(0,0,0,.75));color:#fff;text-align:left;font-weight:600;opacity:0;transform:translateY(8px);transition:.3s}
+.gallery-item:hover span,.gallery-item:focus-visible span{opacity:1;transform:none}
+
+/* Militar */
+.step{padding:28px;border:1px solid rgba(255,255,255,.14);border-radius:18px;background:rgba(255,255,255,.05);transition:.3s}
+.step:hover{background:rgba(255,255,255,.1);transform:translateY(-5px)}
+.step span{color:var(--lime);font-weight:700}.step h3{font-size:1.5rem;margin:6px 0}.step p{color:#d0e3dd;font-size:.95rem}
+
+/* Games + Família */
+.duo{max-width:1100px;margin:auto}
+.panel{padding:44px;border-radius:24px;color:#fff}
+.panel h2{color:#fff;font-size:clamp(2rem,4vw,2.8rem)}
+.game{background:linear-gradient(135deg,#0b1f1c,#0a6656)}
+.family{background:linear-gradient(135deg,#8a5a2b,#c98b4b)}.family .tag{color:#fff3d6}
+blockquote{border-left:3px solid var(--lime);margin:16px 0;padding-left:18px;font-family:var(--serif);font-style:italic;font-size:1.25rem}
+
+/* Contato */
+.contact{background:linear-gradient(135deg,#063f38,#0b6959);padding:100px 8%;color:#fff}
+.contact-box{max-width:1050px;margin:auto}
+.contact h2{color:#fff}.contact p{color:#d6e9e2}
+.contact form{display:flex;flex-direction:column}
+.contact label{font-weight:600;font-size:.9rem;margin:8px 0 5px}
+.contact input,.contact textarea{font:inherit;padding:14px 15px;border:2px solid transparent;border-radius:10px;outline:none;background:#fff;color:var(--text)}
+.contact input:focus,.contact textarea:focus{border-color:var(--lime)}
+.contact input.invalid,.contact textarea.invalid{border-color:#ff8f8f}
+.contact button{margin-top:14px;padding:14px;border:0;border-radius:10px;background:var(--lime);color:#17372e;font-weight:700;font-size:1rem;cursor:pointer;transition:.25s}
+.contact button:hover{filter:brightness(1.08)}
+#form-status{margin-top:10px;color:var(--lime);min-height:1.4em}
+
+footer{background:#022b27;color:#b9d1c9;text-align:center;padding:28px 15px;font-size:.9rem}footer strong{color:#fff}.credit{font-size:.8rem;opacity:.7}
+
+/* Lightbox */
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:2000;display:none;align-items:center;justify-content:center;padding:30px}
+.lightbox.open{display:flex}.lightbox figure{text-align:center}
+.lightbox img{max-width:84vw;max-height:78vh;border-radius:12px}
+.lightbox figcaption{color:#fff;margin-top:14px;font-family:var(--serif);font-size:1.3rem}
+.lb-close,.lb-nav{position:absolute;background:rgba(255,255,255,.12);border:0;color:#fff;cursor:pointer;border-radius:50%;width:48px;height:48px;font-size:2rem;line-height:1}
+.lb-close{top:20px;right:24px}.lb-nav{top:50%}.prev{left:20px}.next{right:20px}.lb-nav:hover,.lb-close:hover{background:var(--lime);color:#111}
+
+.to-top{position:fixed;right:22px;bottom:22px;width:46px;height:46px;border:0;border-radius:50%;background:var(--lime);color:#16362d;font-size:1.3rem;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.3);opacity:0;pointer-events:none;transition:.3s;z-index:900}
+.to-top.show{opacity:1;pointer-events:auto}
+
+/* Animação ao rolar */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s}.reveal.visible{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+
+/* Responsivo (a grade agora é do Bootstrap) */
+@media(max-width:850px){.portrait{max-width:340px;margin:auto}.banner{background-attachment:scroll}}
+@media(max-width:560px){.section{padding:70px 5%}.panel{padding:30px}.lb-nav{top:auto;bottom:20px}.hero{padding:110px 6% 70px}}
+
+/* Menu (Bootstrap navbar) */
+.header-nav{background:rgba(3,48,43,.9);backdrop-filter:blur(12px);padding:10px 6%;transition:.3s}
+.header.scrolled .header-nav{box-shadow:0 6px 24px rgba(0,0,0,.25)}
+.header .nav-link{color:#fff;padding:9px 14px;border-radius:30px;font-size:.92rem;transition:.25s}
+.header .nav-link:hover,.header .nav-link.active{background:rgba(185,231,105,.18);color:var(--lime)}
+.header .nav-alerta{border:1px solid rgba(255,255,255,.3)}
+@media(max-width:1199px){.header .navbar-collapse{padding:8px 0 14px}}
+.header{position:static;min-height:0;padding:0;background:none;backdrop-filter:none}
+.form-control{padding:14px 15px}
+.contact .form-label{margin:8px 0 5px}
+
+/* Acessibilidade e detalhes finais */
+.skip-link{position:absolute;left:-999px;top:8px;background:var(--lime);color:#16362d;padding:10px 16px;border-radius:8px;z-index:3000;font-weight:700;text-decoration:none}.skip-link:focus{left:8px}
+:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
+.gallery-note{font-size:.85rem;color:#7a8a84;text-align:center;margin-top:26px}
